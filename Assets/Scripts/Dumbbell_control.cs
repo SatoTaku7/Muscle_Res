@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum Dumbbell_state {normal,big,small}
 public class Dumbbell_control : MonoBehaviour
@@ -8,10 +9,10 @@ public class Dumbbell_control : MonoBehaviour
     OVRInput.Controller L_con;
     OVRInput.Controller R_con;
     [SerializeField] GameObject Dumbbell;
+    [SerializeField] TextMeshProUGUI Accel_text;
     Dumbbell_state D_state = Dumbbell_state.normal;
     void Start()
     {
-        
         L_con = OVRInput.Controller.LTouch;
         R_con = OVRInput.Controller.RTouch;
     }
@@ -21,7 +22,8 @@ public class Dumbbell_control : MonoBehaviour
         Vector3 L_accel = OVRInput.GetLocalControllerAcceleration(L_con);
         Vector3 R_accle = OVRInput.GetLocalControllerAcceleration(R_con);
         Dumbbell_Size();
-        Debug.Log("ç∂ÇÃâ¡ë¨ìx:" + L_accel + "    âEÇÃâ¡ë¨ìx:"+R_accle);
+        Accel_text.SetText("L_accel:" + L_accel + "    R_accel:" + R_accle);
+        Debug.Log( L_accel);
     }
 
     void Dumbbell_Size()
