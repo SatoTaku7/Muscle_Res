@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.monitor1394.xcharts": "file:C:/Users/takum/Downloads/XCharts-2.0.0/XCharts-2.0.0/Assets/XCharts",
     "com.unity.collab-proxy": "2.0.4",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.21",
