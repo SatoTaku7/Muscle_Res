@@ -50,14 +50,14 @@ public class ChartScript : MonoBehaviour
         chart.yAxes[0].minMaxType = Axis.AxisMinMaxType.Custom;
         chart.yAxes[0].min = 0f;　//最小値
         chart.yAxes[0].max = 4f;　 //最大値
-        chart.yAxes[0].splitNumber = 5; //分割数
+        chart.yAxes[0].splitNumber = 8; //分割数
     }
 
     private void TitleSet()　//タイトルの表示設定
     {
         chart.title.show = true;
-        chart.title.textStyle.fontSize = 30;　//タイトルフォントサイズ
-        chart.title.text = "x-tグラフ";　//タイトルの名称
+        chart.title.textStyle.fontSize = 20;　//タイトルフォントサイズ
+        chart.title.text = "ノルム（3次元ベクトルの大きさ）";　//タイトルの名称
     }
     private void XAxisSet1() //X軸の表示設定
     {
