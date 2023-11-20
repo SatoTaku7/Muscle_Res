@@ -382,6 +382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Training_Bench_final
       objectReference: {fileID: 0}
+    - target: {fileID: 4356877828898064976, guid: 03ec4cbb6c9ea0d42837c3a96fc8fc38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ec4cbb6c9ea0d42837c3a96fc8fc38, type: 3}
 --- !u!1 &120947086
@@ -1415,6 +1419,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 198657403020173958, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2709907994572542152, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
       propertyPath: m_Name
       value: 'Slow_Dumbbell '
@@ -1490,7 +1498,7 @@ PrefabInstance:
     - target: {fileID: 9116726234874949697, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 93ab9afdae7b67c4481ceb263c6a8213, type: 2}
+      objectReference: {fileID: 2100000, guid: 0066bacc1d5fc4644948eaee1f667052, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
 --- !u!1 &496876629 stripped
@@ -2021,7 +2029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &674465719
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5163,7 +5171,7 @@ GameObject:
   - component: {fileID: 1180659835}
   - component: {fileID: 1180659836}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Dumbbell_Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5199,7 +5207,7 @@ MonoBehaviour:
   Dumbbell: {fileID: 732379464}
   Dumbbell_parts: {fileID: 1931576295}
   Slow_Dumbbell: {fileID: 496876629}
-  speed: 0.3
+  speed: 0.6
   Accel_text: {fileID: 373199342}
   Size_text: {fileID: 1582050045}
 --- !u!1 &1217774944
@@ -7586,7 +7594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u88AB\u9A13\u8005\u540D\u524D:\u4F50\u85E4"
+  m_Text: "\u88AB\u9A13\u8005\u540D\u524D:\u3051\u3093\u3059\u3051"
 --- !u!222 &1921525310
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7685,6 +7693,10 @@ PrefabInstance:
     - target: {fileID: 2709907994572542152, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
       propertyPath: m_Name
       value: Dumbbell
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709907994572542152, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3857771778368665667, guid: 46a37224061a67f4fb211d7d2fac7a1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
