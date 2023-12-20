@@ -9,6 +9,8 @@ public class Dumbbell_control : MonoBehaviour
 {
     [SerializeField] GameObject Dumbbell;
     [SerializeField] GameObject Dumbbell_parts;
+    [SerializeField] GameObject Normal_Hand;
+    [SerializeField] GameObject Small_Hand;
     [SerializeField] GameObject Slow_Dumbbell;//íxÇÍÇƒí«è]ÇÃÉ_ÉìÉxÉã
     [SerializeField] float speed;
 
@@ -24,6 +26,7 @@ public class Dumbbell_control : MonoBehaviour
     {
         Size_text.SetText("Å~1");
         Dumbbell_parts.SetActive(true);
+        Normal_Hand.SetActive(true);
         Slow_Dumbbell.SetActive(false);
     }
 
@@ -43,6 +46,9 @@ public class Dumbbell_control : MonoBehaviour
                 case Dumbbell_state.normal://small
                     Dumbbell.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                     Dumbbell_parts.SetActive(true);
+                    Normal_Hand.SetActive(true);
+                    Normal_Hand.transform.localScale = new Vector3(0.04634649f, 0.04634649f, 0.04634649f);
+                    Normal_Hand.transform.localPosition = new Vector3(0.0004996192f, -0.05060722f, -0.09986175f);
                     Slow_Dumbbell.SetActive(false);
                     D_state = Dumbbell_state.small;
                     break;
@@ -51,12 +57,18 @@ public class Dumbbell_control : MonoBehaviour
                     Dumbbell.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
                     D_state = Dumbbell_state.slow;
                     Dumbbell_parts.SetActive(true);
+                    Normal_Hand.SetActive(true);
+                    Normal_Hand.transform.localScale = new Vector3(0.065250437f, 0.065250437f, 0.065250437f);
+                    Normal_Hand.transform.localPosition = new Vector3(-0.0084f, -0.0735f, -0.1363f);
                     Slow_Dumbbell.SetActive(false);
                     break;
 
                 case Dumbbell_state.slow://small_slow
                     Slow_Dumbbell.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                     Dumbbell_parts.SetActive(false);
+                    Normal_Hand.SetActive(false);
+                    Small_Hand.transform.localScale = new Vector3(0.04634649f, 0.04634649f, 0.04634649f); 
+                    Small_Hand.transform.localPosition = new Vector3(0.0026f, -0.0561f, -0.0973f);
                     Slow_Dumbbell.SetActive(true);
                     D_state = Dumbbell_state.small_slow;
                     break;
@@ -64,6 +76,9 @@ public class Dumbbell_control : MonoBehaviour
                 case Dumbbell_state.small_slow://slow
                     Slow_Dumbbell.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
                     Dumbbell_parts.SetActive(false);
+                    Normal_Hand.SetActive(false);
+                    Small_Hand.transform.localScale = new Vector3(0.065250437f, 0.065250437f, 0.065250437f);
+                    Small_Hand.transform.localPosition = new Vector3(-0.005f, -0.076f, -0.133f);
                     Slow_Dumbbell.SetActive(true);
                     D_state = Dumbbell_state.normal;
                     break;
